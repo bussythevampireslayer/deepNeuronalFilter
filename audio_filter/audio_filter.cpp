@@ -40,7 +40,8 @@ void processOneExperiment(const int expIndex, const bool showPlots = true) {
 
 	fprintf(stderr,"Starting DNF on experiment %d, filename = %s.\n",expIndex, outpPrefix.c_str());
 
-	const int samplesNoLearning = 3 * fs / signalWithNoiseHighpassCutOff;
+	//const int samplesNoLearning = 3 * fs / signalWithNoiseHighpassCutOff;
+	const int samplesNoLearning = 0
 	
 	fprintf(stderr,"nTapsDNF = %d\n",nTapsDNF);
 	
