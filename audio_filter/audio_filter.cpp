@@ -119,12 +119,12 @@ void processOneExperiment(const int expIndex, const bool showPlots = true) {
 	Fir1 lms_filter(nTapsDNF);
 	
 	fprintf(stderr,"signalWithNoise_gain = %f, noiseref_gain = %f, remover_gain = %f\n",signalWithNoise_gain,noiseref_gain,remover_gain);
-
+/*
 	int nIgn = start_time_ignore * fs;
 	for(int i = 0; (i < nIgn) && wavread.hasSample(); i++) {
 		wavread.getStereoSample();
 	}
-
+*/
 	// main loop processsing sample by sample
 	while (wavread.hasSample()) {
 		WAVread::StereoSample s = wavread.getStereoSample();
