@@ -161,7 +161,7 @@ public:
 		case Act_NONE:
 			return 1;
 		case Act_ELU:
-			if (input > 0) return 1: else return exp(input);
+			if (input > 0) return 1; else return exp(input);
 		case Act_Sin:
 			return cos(input);
 		}
