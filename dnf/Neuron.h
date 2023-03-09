@@ -137,6 +137,10 @@ public:
 			if (sum > 0) return sum; else return 0;
 		case Act_NONE:
 			return sum;
+		case Act_ELU:
+			if (sum > 0) return sum; else return (exp(sum)-1);
+		case Act_Sin:
+			return sin(sum);
 		}
 		return sum;
 	}
@@ -153,9 +157,13 @@ public:
 		case Act_Tanh:
 			return 1 - pow (tanh(input), 2);
 		case Act_ReLU:
-			if (sum > 0) return 1; else return 0;
+			if (input > 0) return 1; else return 0;
 		case Act_NONE:
 			return 1;
+		case Act_ELU:
+			if (input > 0) return 1: else return exp(input);
+		case Act_Sin:
+			return cos(input);
 		}
 		return 1;
 	}
