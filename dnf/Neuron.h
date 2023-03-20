@@ -141,6 +141,11 @@ public:
 			if (sum > 0) return sum; else return (exp(sum)-1);
 		case Act_Sin:
 			return sin(sum);
+				
+		case Act_ELU2alpha:
+			if (sum > 0) return sum; else return (2*(exp(sum)-1));
+		case Act_Exponential:
+			if (sum > 0) return (1-exp(-sum)); else return (exp(sum)-1));
 		}
 		return sum;
 	}
@@ -164,6 +169,11 @@ public:
 			if (input > 0) return 1; else return exp(input);
 		case Act_Sin:
 			return cos(input);
+				
+		case Act_ELU2alpha:
+			if (sum > 0) return 1; else return (2*(exp(input)));
+		case Act_Exponential:
+			if (sum > 0) return (exp(-input)); else return (exp(input));
 		}
 		return 1;
 	}
