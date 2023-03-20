@@ -59,7 +59,7 @@ public:
 	 * 1 for using the hyperbolic tan function
 	 * 2 for unity function (no activation)
 	 */
-	enum actMethod {Act_Sigmoid = 1, Act_Tanh = 2, Act_ReLU = 3, Act_ELU = 4, Act_Sin = 5, Act_NONE = 0};
+	enum actMethod {Act_Sigmoid = 1, Act_Tanh = 2, Act_ReLU = 3, Act_ELU = 4, Act_Sin = 5, Act_ELU2alpha = 6, Act_Exponential = 7, Act_NONE = 0};
 	/**
 	 * Options for choosing an error to monitor the gradient of
 	 * 0 for monitoring the error that propagates backward
