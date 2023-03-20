@@ -145,7 +145,7 @@ public:
 		case Act_ELU2alpha:
 			if (sum > 0) return sum; else return (2*(exp(sum)-1));
 		case Act_Exponential:
-			if (sum > 0) return (1-exp(-sum)); else return (exp(sum)-1));
+			if (sum > 0) return (1-exp(-sum)); else return (exp(sum)-1);
 		}
 		return sum;
 	}
