@@ -143,7 +143,7 @@ void processOneExperiment(const int expIndex, const bool showPlots = true) {
 
 		double f_nn = dnf.filter(signalWithNoise_filtered,noiserefhp);
 
-		if ((count > (samplesNoLearning+nTapsDNF)) && ((pause_for_snr == true) && ( ((count >= 20*fs) && (count < fs*70)) || ((count >= 90*fs) && (count < fs*140))))){
+		if ((count > (samplesNoLearning+nTapsDNF)){
 			dnf.getNet().setLearningRate(dnf_learning_rate, 0);
 		} else {
 			dnf.getNet().setLearningRate(0, 0);
@@ -159,7 +159,7 @@ void processOneExperiment(const int expIndex, const bool showPlots = true) {
 		wdistance_file << endl;
 
 		// Do LMS filter
-		if ((count > (samplesNoLearning+nTapsDNF)) && ((pause_for_snr == true) && ( ((count >= 20*fs) && (count < fs*70)) || ((count >= 90*fs) && (count < fs*140))))){
+		if ((count > (samplesNoLearning+nTapsDNF)){
 			lms_filter.setLearningRate(lms_learning_rate);
 		} else {
 			lms_filter.setLearningRate(0);
