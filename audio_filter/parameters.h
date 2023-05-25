@@ -8,7 +8,7 @@ const double fs = 48000; // 48000
 const float start_time_ignore = 0; // sec
 
 //when snr is true, filtering is bypassed for first 20 seconds, at 70-90 seconds and 140-160 seconds
-const bool snr = true;
+const bool pause_for_snr = true;
 
 const char* const audioPath = "audio/exp%d/signal_noise.wav";
 
