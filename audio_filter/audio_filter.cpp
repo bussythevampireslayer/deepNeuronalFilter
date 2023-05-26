@@ -146,7 +146,7 @@ void processOneExperiment(const int expIndex, const bool showPlots = true) {
 		
 
 		//if (count > (samplesNoLearning+nTapsDNF)){
-		if ((((count*fs) > 20) && ((count*fs) < 70)) || (((count*fs) > 90) && ((count*fs) < 140))){
+		if ((((count/fs) > 20) && ((count/fs) < 70)) || (((count/fs) > 90) && ((count/fs) < 140))){
 			dnf.getNet().setLearningRate(dnf_learning_rate, 0);
 		} else {
 			dnf.getNet().setLearningRate(0, 0);
@@ -163,7 +163,7 @@ void processOneExperiment(const int expIndex, const bool showPlots = true) {
 
 		// Do LMS filter
 		//if (count > (samplesNoLearning+nTapsDNF)){
-		if ((((count*fs) > 20) && ((count*fs) < 70)) || (((count*fs) > 90) && ((count*fs) < 140))){
+		if ((((count/fs) > 20) && ((count/fs) < 70)) || (((count/fs) > 90) && ((count/fs) < 140))){
 			lms_filter.setLearningRate(lms_learning_rate);
 		} else {
 			lms_filter.setLearningRate(0);
